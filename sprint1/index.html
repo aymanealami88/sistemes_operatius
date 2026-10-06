@@ -29,76 +29,113 @@
         <tr><th>#</th><th>Apartat</th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td><a href="#apartat1">Instal·lació del sistema operatiu</a></td></tr>
-        <tr><td>2</td><td><a href="#apartat2">Configuració de xarxa bàsica</a></td></tr>
-        <tr><td>3</td><td><a href="#apartat3">Creació d'usuaris i grups</a></td></tr>
-        <tr><td>4</td><td><a href="#apartat4">Comprovació final</a></td></tr>
+        <tr><td>1</td><td><a href="#apartat1">Instal·lació SO</a></td></tr>
+        <tr><td>2</td><td><a href="#apartat2">Punts de restauració</a></td></tr>
+        <tr><td>3</td><td><a href="#apartat3">Particions</a></td></tr>
+        <tr><td>4</td><td><a href="#apartat4">Virtualització</a></td></tr>
+        <tr><td>5</td><td><a href="#apartat5">Gestors d'arrencada</a></td></tr>
+        <tr><td>6</td><td><a href="#apartat6">Xarxa bàsica</a></td></tr>
+        <tr><td>7</td><td><a href="#apartat7">Comandes generals i usuaris</a></td></tr>
+        <tr><td>8</td><td><a href="#apartat8">Instal·lacions d'aplicacions</a></td></tr>
       </tbody>
     </table>
 
+    <!-- 1. Instal·lació SO -->
     <article class="apartat" id="apartat1">
-      <h2>1. Instal·lació del sistema operatiu</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Un cop arrencat
-         el suport d'instal·lació, cal seguir l'assistent i triar les opcions de
-         particionat abans de continuar. <strong>Aquest pas és irreversible</strong>,
-         així que revisa bé el disc de destinació.</p>
+      <h2>1. Instal·lació SO</h2>
+      <p>Procés d'instal·lació del sistema operatiu base pas a pas, des de la selecció d'idioma fins a la finalització de la còpia de fitxers de sistema.</p>
       <ul>
-        <li>Arrencar des del USB o la imatge ISO.</li>
-        <li>Triar l'idioma i la distribució de teclat.</li>
-        <li>Configurar el particionat del disc.</li>
-        <li>Esperar que finalitzi la còpia d'arxius i reiniciar.</li>
+        <li>Selecció de la imatge ISO i configuració del teclar[cite: 2].</li>
+        <li>Execució de l'assistent d'instal·lació[cite: 2].</li>
       </ul>
-      <img src="../img/Instal·lacióUbuntu3.png" alt="Captura de pantalla de l'assistent d'instal·lació">
-      <img src="../img/Instal·lacióUbuntu2.png" alt="Captura de pantalla de particions del disc">
-      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Un cop reiniciat el sistema, comprova que arrenca correctament i que
-         reconeix tot el maquinari abans de continuar amb el següent apartat.</p>
+      <img src="../img/Instal·lacióUbuntu1.png" alt="Procés d'instal·lació d'Ubuntu - Pas 1">[cite: 2]
+      <img src="../img/Instal·lacióUbuntu2.png" alt="Procés d'instal·lació d'Ubuntu - Pas 2">[cite: 2]
+      <img src="../img/Instal·lacióUbuntu3.png" alt="Procés d'instal·lació d'Ubuntu - Pas 3">[cite: 2]
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
+
+    <!-- 2. Punts de restauració -->
     <article class="apartat" id="apartat2">
-      <h2>2. Configuració de xarxa bàsica</h2>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-         ut aliquip ex ea commodo consequat. La configuració de xarxa és
-         <strong>imprescindible</strong> per poder actualitzar el sistema i
-         instal·lar programari nou.</p>
-      <ul>
-        <li>Comprovar l'adreça IP assignada amb <code>ip a</code>.</li>
-        <li>Configurar una IP estàtica si el servei ho requereix.</li>
-        <li>Verificar la connectivitat amb <code>ping</code>.</li>
-      </ul>
-      <img src="../img/Xarxa2.png" alt="Captura de pantalla de la terminal amb la IP i ping 8.8.8.8">
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>2. Punts de restauració</h2>
+      <p>Creació i gestió de punts de restauració o <em>snapshots</em> per poder recuperar l'estat anterior del sistema davant qualsevol fallada o configuració errònia.</p>
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
+
+    <!-- 3. Particions -->
     <article class="apartat" id="apartat3">
-      <h2>3. Creació d'usuaris i grups</h2>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui
-         blanditiis praesentium voluptatum deleniti atque corrupti. Cada
-         usuari nou s'hauria d'assignar al <strong>grup mínim necessari</strong>
-         segons les tasques que ha de fer.</p>
-      <img src="../img/Grups2.png" alt="Captura de pantalla de la gestió d'usuaris">
-      <ul>
-        <li>Crear l'usuari amb <code>useradd</code>.</li>
-        <li>Assignar contrasenya amb <code>passwd</code>.</li>
-        <li>Afegir l'usuari als grups necessaris amb <code>usermod -aG</code>.</li>
-      </ul>
+      <h2>3. Particions</h2>
+      <p>Estructuració del disc dur, definició de taules de particions i assignació dels punts de muntatge corresponents per al correcte funcionament del SO.</p>
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
+
+    <!-- 4. Virtualització -->
     <article class="apartat" id="apartat4">
-      <h2>4. Comprovació final</h2>
-      <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-         tempore, cum soluta nobis est eligendi optio cumque nihil impedit.
-         Abans de donar per acabat el sprint, revisa aquest resum:</p>
+      <h2>4. Virtualització</h2>
+      <p>Procés de configuració de màquines virtuals utilitzant l'eina VirtualBox. S'inclouen les diferents etapes de creació i paràmetres assignats a l'entorn virtualitzat.</p>
+      <img src="../img/VB1.png" alt="Configuració de VirtualBox - Captura 1">[cite: 2]
+      <img src="../img/VB2.png" alt="Configuració de VirtualBox - Captura 2">[cite: 2]
+      <img src="../img/VB3.png" alt="Configuració de VirtualBox - Captura 3">[cite: 2]
+      <img src="../img/VB4.png" alt="Configuració de VirtualBox - Captura 4">[cite: 2]
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- 5. Gestors d'arrencada -->
+    <article class="apartat" id="apartat5">
+      <h2>5. Gestors arrencada</h2>
+      <p>Configuració del gestor d'arrencada (GRUB) per permetre la selecció de diferents sistemes operatius o paràmetres de l'inici del nucli.</p>
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- 6. Xarxa bàsica -->
+    <article class="apartat" id="apartat6">
+      <h2>6. Xarxa bàsica</h2>
+      <p>Verificació i configuració de les opcions de xarxa per assegurar la connectivitat del sistema tant localment com cap a Internet.</p>
       <ul>
-        <li>El sistema arrenca sense errors.</li>
-        <li>La xarxa respon correctament als <em>pings</em>.</li>
-        <li><strong>Els usuaris i grups creats coincideixen amb l'enunciat.</strong></li>
+        <li>Comprovació de la interfície i adreça IP[cite: 2].</li>
+        <li>Proves de connectivitat mitjançant comandes de xarxa[cite: 2].</li>
       </ul>
-      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-         fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-         sequi nesciunt.</p>
+      <img src="../img/Xarxa1.png" alt="Configuració de xarxa bàsica - Captura 1">[cite: 2]
+      <img src="../img/Xarxa2.png" alt="Configuració de xarxa bàsica - Captura 2">[cite: 2]
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- 7. Comandes generals -->
+    <article class="apartat" id="apartat7">
+      <h2>7. Comandes generals</h2>
+      <p>Gestió d'usuaris, permisos i exercicis pràctics d'administració de grups realitzats a la consola del sistema.</p>
+      <img src="../img/Grups1.png" alt="Gestió d'usuaris i grups - Captura 1">[cite: 2]
+      <img src="../img/Grups2.png" alt="Gestió d'usuaris i grups - Captura 2">[cite: 2]
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- 8. Instal·lacions aplicacions -->
+    <article class="apartat" id="apartat8">
+      <h2>8. Instal·lacions aplicacions</h2>
+      <p>Procés d'instal·lació i verificació de diversos programes i eines dins de la màquina virtual.</p>
+
+      <h3>Geany</h3>
+      <p>Instal·lació de l'editor de text i entorn de desenvolupament lleuger Geany.</p>
+      <img src="../img/GEANY.png" alt="Instal·lació de Geany - Pas 1">[cite: 2]
+      <img src="../img/GEANY2.png" alt="Instal·lació de Geany - Pas 2">[cite: 2]
+
+      <h3>GIMP</h3>
+      <p>Instal·lació i configuració de l'editor d'imatges GIMP.</p>
+      <img src="../img/GIMP.png" alt="Instal·lació de GIMP - Pas 1">[cite: 2]
+      <img src="../img/GIMP2.png" alt="Instal·lació de GIMP - Pas 2">[cite: 2]
+      <img src="../img/GIMP3.png" alt="Instal·lació de GIMP - Pas 3">[cite: 2]
+
+      <h3>VLC Media Player</h3>
+      <p>Instal·lació del reproductor multimèdia VLC.</p>
+      <img src="../img/VLC.png" alt="Instal·lació de VLC - Pas 1">[cite: 2]
+      <img src="../img/VLC2.png" alt="Instal·lació de VLC - Pas 2">[cite: 2]
+
+      <h3>Jocs i Altres Aplicacions</h3>
+      <p>Proves d'instal·lació d'altres aplicacions i jocs com MegaMario o UTerror.</p>
+      <img src="../img/MMARIO.png" alt="Instal·lació de MegaMario - Pas 1">[cite: 2]
+      <img src="../img/MMARIO2.png" alt="Instal·lació de MegaMario - Pas 2">[cite: 2]
+      <img src="../img/UTERROR.png" alt="Instal·lació de UTerror - Pas 1">[cite: 2]
+      <img src="../img/UTERROR2.png" alt="Instal·lació de UTerror - Pas 2">[cite: 2]
+
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
   </section>
