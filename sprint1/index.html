@@ -29,127 +29,81 @@
         <tr><th>#</th><th>Apartat</th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td><a href="#apartat1">Instal·lació SO</a></td></tr>
-        <tr><td>2</td><td><a href="#apartat2">Punts de restauració</a></td></tr>
-        <tr><td>3</td><td><a href="#apartat3">Particions</a></td></tr>
-        <tr><td>4</td><td><a href="#apartat4">Virtualització</a></td></tr>
-        <tr><td>5</td><td><a href="#apartat5">Gestors d'arrencada</a></td></tr>
-        <tr><td>6</td><td><a href="#apartat6">Xarxa bàsica</a></td></tr>
-        <tr><td>7</td><td><a href="#apartat7">Comandes generals i usuaris</a></td></tr>
-        <tr><td>8</td><td><a href="#apartat8">Instal·lacions d'aplicacions</a></td></tr>
+        <tr><td>1</td><td><a href="#apartat1">Instal·lació del sistema operatiu</a></td></tr>
+        <tr><td>2</td><td><a href="#apartat2">Virtualització</a></td></tr>
+        <tr><td>3</td><td><a href="#apartat3">Gestors d'arrencada</a></td></tr>
+        <tr><td>4</td><td><a href="#apartat4">Xarxa bàsica</a></td></tr>
+        <tr><td>5</td><td><a href="#apartat5">Comandes generals i usuaris</a></td></tr>
+        <tr><td>6</td><td><a href="#apartat6">Instal·lacions d'aplicacions</a></td></tr>
       </tbody>
     </table>
 
     <!-- 1. Instal·lació SO -->
     <article class="apartat" id="apartat1">
-      <h2>1. Instal·lació SO</h2>
-      <p>Procés d'instal·lació del sistema operatiu base pas a pas, des de la selecció d'idioma fins a la finalització de la còpia de fitxers de sistema.</p>
+      <h2>1. Instal·lació del sistema operatiu</h2>
+      <p>Procés d'instal·lació del sistema operatiu base pas a pas, des de la selecció d'idioma fins a la configuració de particions i la finalització de la còpia de fitxers de sistema.</p>
       <ul>
-        <li>Selecció de la imatge ISO i configuració del teclar .</li>
-        <li>Execució de l'assistent d'instal·lació.</li>
+        <li>Arrencar des de la imatge ISO i triar idioma/teclat.</li>
+        <li>Configurar el particionat del disc i punts de restauració.</li>
+        <li>Finalitzar la instal·lació i reiniciar el sistema.</li>
       </ul>
-      <img src="../img/Instal·lacióUbuntu1.png" alt="Procés d'instal·lació d'Ubuntu - Pas 1">
-      <img src="../img/Instal·lacióUbuntu2.png" alt="Procés d'instal·lació d'Ubuntu - Pas 2">
-      <img src="../img/Instal·lacióUbuntu3.png" alt="Procés d'instal·lació d'Ubuntu - Pas 3">
+      <img src="../img/Instal·lacióUbuntu1.png" alt="Procés d'instal·lació d'Ubuntu - Pas 1">
+      <img src="../img/Instal·lacióUbuntu2.png" alt="Procés d'instal·lació d'Ubuntu - Pas 2">
+      <img src="../img/Instal·lacióUbuntu3.png" alt="Procés d'instal·lació d'Ubuntu - Pas 3">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
-    <!-- 2. Punts de restauració -->
+    <!-- 2. Virtualització -->
     <article class="apartat" id="apartat2">
-      <h2>2. Punts de restauració</h2>
-      <p>Creació i gestió de punts de restauració o <em>snapshots</em> per poder recuperar l'estat anterior del sistema davant qualsevol fallada o configuració errònia.</p>
+      <h2>2. Virtualització</h2>
+      <p>Procés de configuració de màquines virtuals utilitzant l'eina VirtualBox. S'inclouen les diferents etapes de creació i paràmetres assignats a l'entorn virtualitzat.</p>
+      <img src="../img/VB1.png" alt="Configuració de VirtualBox - Captura 1">
+      <img src="../img/VB2.png" alt="Configuració de VirtualBox - Captura 2">
+      <img src="../img/VB3.png" alt="Configuració de VirtualBox - Captura 3">
+      <img src="../img/VB4.png" alt="Configuració de VirtualBox - Captura 4">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
-    <!-- 3. Particions -->
+    <!-- 3. Gestors d'arrencada -->
     <article class="apartat" id="apartat3">
-      <h2>3. Particions</h2>
-      <p>Estructuració del disc dur, definició de taules de particions i assignació dels punts de muntatge corresponents per al correcte funcionament del SO.</p>
-      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
-    </article>
-
-    <!-- 4. Virtualització -->
-    <article class="apartat" id="apartat4">
-      <h2>4. Virtualització</h2>
-      <p>Procés de configuració de màquines virtuals utilitzant l'eina VirtualBox. S'inclouen les diferents etapes de creació i paràmetres assignats a l'entorn virtualitzat.</p>
-      <img src="../img/VB1.png" alt="Configuració de VirtualBox - Captura 1"> 
-      <img src="../img/VB2.png" alt="Configuració de VirtualBox - Captura 2"> 
-      <img src="../img/VB3.png" alt="Configuració de VirtualBox - Captura 3"> 
-      <img src="../img/VB4.png" alt="Configuració de VirtualBox - Captura 4"> 
-      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
-    </article>
-
-    <!-- 5. Gestors d'arrencada -->
-    <article class="apartat" id="apartat5">
-      <h2>5. Gestors arrencada</h2>
+      <h2>3. Gestors d'arrencada</h2>
       <p>Configuració del gestor d'arrencada (GRUB) per permetre la selecció de diferents sistemes operatius o paràmetres de l'inici del nucli.</p>
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
-    <!-- 6. Xarxa bàsica -->
-    <article class="apartat" id="apartat6">
-      <h2>6. Xarxa bàsica</h2>
+    <!-- 4. Xarxa bàsica -->
+    <article class="apartat" id="apartat4">
+      <h2>4. Xarxa bàsica</h2>
       <p>Verificació i configuració de les opcions de xarxa per assegurar la connectivitat del sistema tant localment com cap a Internet.</p>
       <ul>
-        <li>Comprovació de la interfície i adreça IP .</li>
-        <li>Proves de connectivitat mitjançant comandes de xarxa .</li>
+        <li>Comprovació de la interfície i adreça IP.</li>
+        <li>Proves de connectivitat mitjançant comandes de xarxa.</li>
       </ul>
-      <img src="../img/Xarxa1.png" alt="Configuració de xarxa bàsica - Captura 1"> 
-      <img src="../img/Xarxa2.png" alt="Configuració de xarxa bàsica - Captura 2"> 
+      <img src="../img/ConnexióXarxes1.png" alt="Configuració de xarxa bàsica - Pas 1">
+      <img src="../img/ConnexióXarxes2.png" alt="Configuració de xarxa bàsica - Pas 2">
+      <img src="../img/ConnexióXarxes3.png" alt="Configuració de xarxa bàsica - Pas 3">
+      <img src="../img/ConnexióXarxes4.png" alt="Configuració de xarxa bàsica - Pas 4">
+      <img src="../img/ConnexióXarxes5.png" alt="Configuració de xarxa bàsica - Pas 5">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
-    <!-- 7. Comandes generals -->
-    <article class="apartat" id="apartat7">
-      <h2>7. Comandes generals</h2>
-      <p>Gestió d'usuaris, permisos i exercicis pràctics d'administració de grups realitzats a la consola del sistema.</p>
-      <img src="../img/Grups1.png" alt="Gestió d'usuaris i grups - Captura 1"> 
-      <img src="../img/Grups2.png" alt="Gestió d'usuaris i grups - Captura 2"> 
+    <!-- 5. Comandes generals -->
+    <article class="apartat" id="apartat5">
+      <h2>5. Comandes generals i usuaris</h2>
+      <p>Gestió d'usuaris, permisos i exercicis pràctics d'administració realitzats a la consola del sistema Linux.</p>
+      <p>A continuació es pot consultar el document amb la pràctica completa de comandes:</p>
+      <p>
+        <a href="../docs/Pràctica comandes linux.pdf" target="_blank" class="boto-pdf">📄 Veure / Descarregar Pràctica de Comandes Linux (PDF)</a>
+      </p>
+      <img src="../img/Grups1.png" alt="Gestió d'usuaris i grups - Captura 1">
+      <img src="../img/Grups2.png" alt="Gestió d'usuaris i grups - Captura 2">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
-    <!-- 8. Instal·lacions aplicacions -->
-    <article class="apartat" id="apartat8">
-      <h2>8. Instal·lacions aplicacions</h2>
+    <!-- 6. Instal·lacions aplicacions -->
+    <article class="apartat" id="apartat6">
+      <h2>6. Instal·lacions d'aplicacions</h2>
       <p>Procés d'instal·lació i verificació de diversos programes i eines dins de la màquina virtual.</p>
 
       <h3>Geany</h3>
-      <p>Instal·lació de l'editor de text i entorn de desenvolupament lleuger Geany.</p>
-      <img src="../img/GEANY.png" alt="Instal·lació de Geany - Pas 1"> 
-      <img src="../img/GEANY2.png" alt="Instal·lació de Geany - Pas 2"> 
-
-      <h3>GIMP</h3>
-      <p>Instal·lació i configuració de l'editor d'imatges GIMP.</p>
-      <img src="../img/GIMP.png" alt="Instal·lació de GIMP - Pas 1"> 
-      <img src="../img/GIMP2.png" alt="Instal·lació de GIMP - Pas 2"> 
-      <img src="../img/GIMP3.png" alt="Instal·lació de GIMP - Pas 3"> 
-
-      <h3>VLC Media Player</h3>
-      <p>Instal·lació del reproductor multimèdia VLC.</p>
-      <img src="../img/VLC.png" alt="Instal·lació de VLC - Pas 1"> 
-      <img src="../img/VLC2.png" alt="Instal·lació de VLC - Pas 2"> 
-
-      <h3>Jocs i Altres Aplicacions</h3>
-      <p>Proves d'instal·lació d'altres aplicacions i jocs com MegaMario o UTerror.</p>
-      <img src="../img/MMARIO.png" alt="Instal·lació de MegaMario - Pas 1"> 
-      <img src="../img/MMARIO2.png" alt="Instal·lació de MegaMario - Pas 2"> 
-      <img src="../img/UTERROR.png" alt="Instal·lació de UTerror - Pas 1"> 
-      <img src="../img/UTERROR2.png" alt="Instal·lació de UTerror - Pas 2"> 
-
-      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
-    </article>
-  </section>
-</main>
-
-<footer class="peu">
-  <p class="peu-llicencia">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">
-      <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0" width="88" height="31">
-    </a>
-    <span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span>
-  </p>
-  <p class="autoria">Autor/a: <strong>Aymane Alami Ben Aissa</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p>
-</footer>
-
-</body>
-</html>
+      <p>
