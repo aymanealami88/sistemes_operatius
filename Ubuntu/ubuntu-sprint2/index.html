@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sprint 2 · Gestió de programari i usuaris</title>
+<title>Sprint 2 · Gestió de programari, usuaris i processos</title>
 <link rel="stylesheet" href="../../css/estils.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
   </nav>
   <div class="hero-titol">
     <p class="miguetes"><a href="../../index.html">Portada</a> / <a href="../../sprints.html">Índex de sprints</a> / Sprint 2</p>
-    <h1>Sprint 2 · Gestió de programari i usuaris</h1>
+    <h1>Sprint 2 · Gestió de programari, usuaris i processos</h1>
     <p class="subtitol">Índex d'apartats d'aquest sprint</p>
   </div>
 </header>
@@ -30,16 +30,17 @@
       </thead>
       <tbody>
         <tr><td>1</td><td><a href="#apartat1">Gestors de paquets</a></td></tr>
-        <tr><td>2</td><td><a href="#apartat2">Permisos i propietaris d'arxius</a></td></tr>
+        <tr><td>2</td><td><a href="#apartat2">Gestió d'usuaris i grups</a></td></tr>
+        <tr><td>3</td><td><a href="#apartat3">Gestió de permisos</a></td></tr>
+        <tr><td>4</td><td><a href="#apartat4">Gestió de processos</a></td></tr>
+        <tr><td>5</td><td><a href="#apartat5">Sistemes de fitxers</a></td></tr>
       </tbody>
     </table>
 
+    <!-- APARTAT 1 -->
     <article class="apartat" id="apartat1">
       <h2>1. Gestors de paquets</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. El gestor de
-         paquets permet <strong>instal·lar, actualitzar i eliminar</strong>
-         programari de manera controlada.</p>
+      <p>El gestor de paquets permet <strong>instal·lar, actualitzar i eliminar</strong> programari de manera controlada al sistema operatiu.</p>
       <ul>
         <li>Actualitzar la llista de paquets disponibles.</li>
         <li>Instal·lar un paquet nou.</li>
@@ -47,15 +48,87 @@
       </ul>
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
+
+    <!-- APARTAT 2 -->
     <article class="apartat" id="apartat2">
-      <h2>2. Permisos i propietaris d'arxius</h2>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-         ut aliquip ex ea commodo consequat. Cada arxiu té un
-         <strong>propietari, un grup i uns permisos</strong> que en determinen
-         l'accés.</p>
-      <img src="../../img/exemple.svg" alt="Exemple de captura de pantalla dels permisos d'un arxiu">
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-         dolore eu fugiat nulla pariatur.</p>
+      <h2>2. Gestió d'usuaris i grups</h2>
+      <p>Pendent d'afegir contingut d'aquest bloc.</p>
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- APARTAT 3 -->
+    <article class="apartat" id="apartat3">
+      <h2>3. Gestió de permisos</h2>
+      <p>Pendent d'afegir contingut d'aquest bloc.</p>
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- APARTAT 4: GESTIÓ DE PROCESSOS -->
+    <article class="apartat" id="apartat4">
+      <h2>4. Gestió de processos</h2>
+      <p>En aquesta missió s'analitza el comportament dels processos a Ubuntu Linux, la seva priorització, execució en primer/segon pla i la gestió de senyals[cite: 2, 4, 5].</p>
+      
+      <h3>4.1. Teoria</h3>
+      <p>Un <strong>programa</strong> és un fitxer al disc, mentre que un <strong>procés</strong> és aquest programa en execució[cite: 3].</p>
+      <ul>
+        <li><strong>PID i PPID:</strong> Cada procés té un identificador únic (PID) i un procés pare (PPID)[cite: 3]. El primer procés del sistema és <code>systemd</code> (PID 1)[cite: 3].</li>
+        <li><strong>Estats d'un procés:</strong> En execució/preparat (R), Dormint (S), Espera no interrompible (D), Aturat (T), Zombi (Z)[cite: 4].</li>
+        <li><strong>Primer i Segon Pla:</strong> Els processos en segon pla s'executen afegint <code>&amp;</code> al final de l'ordre o gestionant-los amb <code>bg</code> i <code>fg</code>[cite: 4].</li>
+        <li><strong>Senyals:</strong> Permeten comunicar-se amb els processos: <code>SIGTERM</code> (15) demana finalitzar[cite: 5], <code>SIGKILL</code> (9) força el tancament[cite: 5], <code>SIGSTOP</code> (19) o <code>Ctrl+Z</code> atura el procés[cite: 4, 5], i <code>SIGHUP</code> (1) avisa del tancament del terminal[cite: 5].</li>
+        <li><strong>Prioritat i Nice:</strong> El valor nice oscil·la entre -20 (més prioritat, només root) i 19 (menys prioritat)[cite: 5].</li>
+      </ul>
+
+      <h3>4.2. Ordres principals</h3>
+      <ul>
+        <li><code>ps u $USER</code> / <code>ps aux</code>: Llista els processos del sistema[cite: 6].</li>
+        <li><code>pstree -p $USER</code>: Mostra l'arbre de processos amb el seu PID[cite: 6].</li>
+        <li><code>top</code>: Monitoritza els processos en temps real[cite: 6].</li>
+        <li><code>pgrep nom</code>: Cerca el PID d'un procés per nom[cite: 6].</li>
+        <li><code>renice -n valor -p PID</code>: Modifica la prioritat d'un procés en execució[cite: 7].</li>
+        <li><code>kill -senyal PID</code> / <code>pkill nom</code>: Envia un senyal a un o diversos processos[cite: 6].</li>
+      </ul>
+
+      <h3>4.3. Pràctica guiada (Nivells 0 al 7)</h3>
+
+      <h4>Nivell 0: Preparar el cas</h4>
+      <p>Es creen els scripts <code>minador</code>, <code>backup_nocturn</code>, <code>espia</code>, <code>descarrega.sh</code> i <code>sospitosos.sh</code>, atorgant-los permisos d'execució amb <code>chmod +x</code> i executant el sabotatge[cite: 8, 9, 10].</p>
+      <img src="../../img/Sprint2-Ubuntu/captura1.png" alt="Captura 1: Preparació dels scripts i execució de sospitosos.sh">
+
+      <h4>Nivell 1: Reconeixement (Veure els processos)</h4>
+      <p>Identificació dels processos del sistema i la seva jerarquia a l'arbre de processos penjant de <code>systemd</code>[cite: 11, 12].</p>
+      <img src="../../img/Sprint2-Ubuntu/captura2.png" alt="Captura 2: Arbre de processos amb pstree">
+
+      <h4>Nivell 2: Qui consumeix més?</h4>
+      <p>Ús de l'ordre <code>top</code> i filtratge amb <code>ps aux --sort=-%cpu</code> per identificar els processos que més CPU consumeixen[cite: 12].</p>
+      <img src="../../img/Sprint2-Ubuntu/captura3.png" alt="Captura 3: Monitorització de processos amb top">
+
+      <h4>Nivell 3: Interrogatori (Filtrar amb ps)</h4>
+      <p>Filtratge avançat amb <code>grep</code>, <code>pgrep</code> i selecció de columnes específiques amb <code>ps -o</code> per obtenir informació detallada dels sospitosos[cite: 13].</p>
+      <img src="../../img/Sprint2-Ubuntu/captura4.png" alt="Captura 4: Filtratge de processos amb ps i pgrep">
+
+      <h4>Nivell 4: La descàrrega urgent (Primer i segon pla)</h4>
+      <p>Control de l'execució del procés <code>descarrega.sh</code> alternant entre primer pla, pausa (<code>Ctrl+Z</code>) i segon pla (<code>bg</code>, <code>fg</code>, <code>jobs</code>)[cite: 14].</p>
+      <img src="../../img/Sprint2-Ubuntu/captura5.png" alt="Captura 5: Gestió de primer i segon pla">
+
+      <h4>Nivell 5: Prioritat a la descàrrega</h4>
+      <p>Assignació de major prioritat de CPU al procés de descàrrega utilitzant <code>sudo renice -n -10</code>[cite: 15].</p>
+      <img src="../../img/Sprint2-Ubuntu/captura6.png" alt="Captura 6: Canvi de prioritat amb renice">
+
+      <h4>Nivell 6: Neutralitzar els intrusos</h4>
+      <p>Finalització dels processos <code>minador</code> amb <code>SIGTERM</code>[cite: 16], tancament forçat de <code>espia</code> amb <code>SIGKILL</code> (<code>kill -9</code>)[cite: 16, 17] i pausa/represa de <code>backup_nocturn</code> amb <code>SIGSTOP</code> i <code>SIGCONT</code>[cite: 17].</p>
+      <img src="../../img/Sprint2-Ubuntu/captura7.png" alt="Captura 7: Neutralització de processos i gestió de senyals">
+
+      <h4>Nivell 7: Que la descàrrega no es perdi</h4>
+      <p>Execució del procés amb <code>nohup</code> per mantenir-lo en execució en segon pla fins i tot després de tancar la sessió del terminal[cite: 17, 18].</p>
+      <img src="../../img/Sprint2-Ubuntu/captura8.png" alt="Captura 8: Execució persistent amb nohup">
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- APARTAT 5 -->
+    <article class="apartat" id="apartat5">
+      <h2>5. Sistemes de fitxers</h2>
+      <p>Pendent d'afegir contingut d'aquest bloc.</p>
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
   </section>
