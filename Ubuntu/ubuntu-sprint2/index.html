@@ -54,28 +54,36 @@
     <article class="apartat" id="apartat3">
       <h2>3. Gestió de processos</h2>
 
-      <p>Comprovació de la preparació de la carpeta de la missió, assignació de permisos d'execució als cinc scripts i llançament del sabotatge en segon pla.</p>
+      <p><strong>Nivell 0: Preparar el cas</strong><br>
+      Comprovació de la preparació de la carpeta de la missió, assignació de permisos d'execució als cinc scripts i llançament del sabotatge en segon pla.</p>
       <img src="../../img/Sprint2-Ubuntu/captura1.png" alt="Captura 1: Preparació dels scripts i execució del sabotatge">
 
-      <p>Visualització dels processos del sistema i localització dels sospitosos penjant directament del procés principal systemd a l'arbre de processos.</p>
+      <p><strong>Nivell 1: Reconeixement</strong><br>
+      Visualització dels processos del sistema i localització dels sospitosos penjant directament del procés principal systemd a l'arbre de processos.</p>
       <img src="../../img/Sprint2-Ubuntu/captura2.png" alt="Captura 2: Arbre de processos amb pstree">
 
-      <p>Monitorització en temps real amb top ordenada per ús de CPU, on es detecta que els dos processos minador encapçalen el consum del sistema.</p>
+      <p><strong>Nivell 2: Qui consumeix més?</strong><br>
+      Monitorització en temps real amb top ordenada per ús de CPU, on es detecta que els dos processos minador encapçalen el consum del sistema.</p>
       <img src="../../img/Sprint2-Ubuntu/captura3.png" alt="Captura 3: Monitorització de consum de CPU amb top">
 
-      <p>Filtratge de la llista de processos per trobar els PID i la informació detallada dels tres sospitosos mitjançant pgrep i l'ordre ps personalitzada.</p>
+      <p><strong>Nivell 3: Interrogatori amb ps</strong><br>
+      Filtratge de la llista de processos per trobar els PID i la informació detallada dels tres sospitosos mitjançant pgrep i l'ordre ps personalitzada.</p>
       <img src="../../img/Sprint2-Ubuntu/captura4.png" alt="Captura 4: Filtratge i detall dels sospitosos amb ps i pgrep">
 
-      <p>Control de l'execució del procés descarrega.sh alternant entre la congelació en primer pla i la continuació en segon pla comprovant-ho en dos terminals.</p>
+      <p><strong>Nivell 4: Descarrega en segon pla</strong><br>
+      Control de l'execució del procés descarrega.sh alternant entre la congelació en primer pla i la continuació en segon pla comprovant-ho en dos terminals.</p>
       <img src="../../img/Sprint2-Ubuntu/captura5.png" alt="Captura 5: Control de primer i segon pla amb jobs, bg i fg">
 
-      <p>Assignació de major prioritat a la descàrrega urgent amb sudo renice -n -10, aconseguint que obtingui més del 80% del temps de CPU.</p>
+      <p><strong>Nivell 5: Prioritat a la descarrega</strong><br>
+      Assignació de major prioritat a la descàrrega urgent amb sudo renice -n -10, aconseguint que obtingui més del 80% del temps de CPU.</p>
       <img src="../../img/Sprint2-Ubuntu/captura6.png" alt="Captura 6: Canvi de prioritat amb renice a favor de la descàrrega">
 
-      <p>Neutralització dels minadors i l'espia mitjançant els senyals SIGTERM i SIGKILL (kill -9), així com la comprovació de pauses i reprès del procés de backup.</p>
+      <p><strong>Nivell 6: Neutralitzar</strong><br>
+      Neutralització dels minadors i l'espia mitjançant els senyals SIGTERM i SIGKILL (kill -9), així com la comprovació de pauses i reprès del procés de backup.</p>
       <img src="../../img/Sprint2-Ubuntu/captura7.png" alt="Captura 7: Gestió de senyals kill, SIGKILL, SIGSTOP i SIGCONT">
 
-      <p>Execució persistent de la descàrrega amb nohup en segon pla, assegurant que continuï fins a completar-se tot i tancar la finestra del terminal.</p>
+      <p><strong>Nivell 7: Que no es perdi</strong><br>
+      Execució persistent de la descàrrega amb nohup en segon pla, assegurant que continuï fins a completar-se tot i tancar la finestra del terminal.</p>
       <img src="../../img/Sprint2-Ubuntu/captura8.png" alt="Captura 8: Execució persistent en segon pla amb nohup">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
